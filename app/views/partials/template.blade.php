@@ -27,6 +27,7 @@
 
 <ul>
     <li><a class="{{ Request::is('/') ? 'active' : '' }}" href="/">Home</a></li>
+    <li><a class="{{ Request::is('about') ? 'active' : '' }}" href="/about">About</a></li>
     <li><a class="{{ Request::is('contact') ? 'active' : '' }}" href="/contact">Contact</a></li>
 </ul>
 

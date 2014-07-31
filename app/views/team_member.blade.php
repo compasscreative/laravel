@@ -23,7 +23,9 @@
 @endif
 
 @if ($team_member->bio)
-    {{{ $team_member->bio }}}
+    <div>
+        {{ $team_member->bio_as_html }}
+    </div>
 @endif
 
 @stop

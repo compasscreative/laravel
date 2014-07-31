@@ -32,4 +32,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface
     {
         return $this->first_name . ' ' . $this->last_name;
     }
+
+    /**
+     * Get the user's bio as HTML.
+     *
+     * @return string
+     */
+    public function getBioAsHTMLAttribute()
+    {
+        $parsedown = new \Parsedown;
+        return $parsedown->text($this->bio);
+    }
 }
