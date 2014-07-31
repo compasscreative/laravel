@@ -3,22 +3,22 @@
 ## Quick start
 
 ```bash
-// Clone as new project
+# Clone as new project
 git clone https://github.com/compasscreative/laravel.git your-project-name
 
-// Switch to new project folder
+# Switch to new project folder
 cd your-project-name
 
-// Install Composer dependencies
+# Install Composer dependencies
 composer install
 
-// Migrate the database
+# Migrate the database
 php artisan migrate
 
-// Seed the database
+# Seed the database
 php artisan db:seed
 
-// Start local development server
+# Start local development server
 php artisan serve
 ```
 
