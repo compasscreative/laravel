@@ -26,7 +26,7 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('homestead'),
+	'local' => array('homestead', 'jonathan', 'jonathan.local', 'jeremy', 'jeremy.local'),
 
 ));
 
@@ -55,9 +55,26 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 */
 
 $framework = $app['path.base'].
-                 '/vendor/laravel/framework/src';
+				 '/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
+
+/*
+|--------------------------------------------------------------------------
+| Automatically create SQLite database
+|--------------------------------------------------------------------------
+|
+| If the default database driver is set to SQLite, but defined SQLite
+| database file does not exist, automatically create it.
+|
+*/
+
+if (Config::get('database.default') === 'sqlite') {
+	$path = Config::get('database.connections.sqlite.database');
+	if (!file_exists($path) && is_dir(dirname($path))) {
+		touch($path);
+	}
+}
 
 /*
 |--------------------------------------------------------------------------
