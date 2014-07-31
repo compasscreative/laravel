@@ -1,6 +1,6 @@
 ## Compass Creative Laravel Project Boilerplate
 
-## Quick start
+## New Project
 
 ```bash
 # Clone as new project
@@ -20,6 +20,31 @@ php artisan db:seed
 
 # Start local development server
 php artisan serve
+```
+
+## Redesign
+
+```bash
+# Create new redesign branch
+git branch redesign
+
+# Switch to new branch
+git checkout redesign
+
+# Delete all old project files, ie:
+rm -rf public
+
+# Add Laravel remote
+git remote add laravel https://github.com/compasscreative/laravel.git
+
+# Fetch Laravel master branch
+git fetch laravel master
+
+# Merge Laravel master branch
+git merge --squash laravel/master
+
+# Remove Laravel remote
+git remote remove laravel
 ```
 
 ## Features
