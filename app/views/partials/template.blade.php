@@ -32,8 +32,8 @@
 
 @yield('content')
 
-@if (is_file(public_path() . '/js/min/all-min.js'))
-    <script src="/js/min/all-min.{{ filemtime(public_path() . '/js/min/all-min.js') }}.js"></script>
+@if (is_file(public_path() . '/js/all.min.js'))
+    <script src="/js/all.min.{{ filemtime(public_path() . '/js/all.min.js') }}.js"></script>
 @endif
 
 </body>

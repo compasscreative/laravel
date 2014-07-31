@@ -1,10 +1,3 @@
-/*
-@codekit-prepend '../vendor/jquery/jquery.js'
-@codekit-prepend '../vendor/jquery-validation/jquery.validate.js'
-*/
-
-$(function() {
-
-    $('.contact_form').validate();
-
-});
+//= include ../vendor/jquery/jquery.js
+//= include ../vendor/jquery-validation/jquery.validate.js
+//= include contact_form.js
