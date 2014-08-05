@@ -45,6 +45,11 @@ gulp.task('js', function() {
                .pipe(notify({ message: 'Minified JS (<%=file.relative%>)' }));
 });
 
+gulp.task('respond', function(){
+    return gulp.src('public/vendor/bower_components/respond/dest/respond.min.js')
+               .pipe(gulp.dest('public/vendor/respond/'))
+               .pipe(notify({ message: 'Built respond.js from bower.' }));
+});
 
 /*
 |--------------------------------------------------------------------------

@@ -7,7 +7,7 @@ bower update
 ```
 
 ## Respond.js
- I’m including respond.js in git so we can link to it directly
+I have a gulp task to build the respond file from bower. This way we don’t have to include the respond bower files in git, but can still have the latest respond.js.
 
 ## Modernizr
-I’ve kept modernizr outside of bower so we can have a customized version of it. Eventually we should be able to build our own modernizr on demand. See: https://github.com/doctyper/customizr
+I’ve kept modernizr outside of bower so we can have a customized version of it. Eventually we should be able to build our own modernizr file on demand. See: https://github.com/doctyper/customizr

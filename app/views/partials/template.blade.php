@@ -16,11 +16,11 @@
     @endif
 
     @if (is_file(public_path() . '/vendor/modernizr/modernizr.min.js'))
-        <script src="/vendor/modernizr/modernizr.min.{{ filemtime(public_path() . '/vendor/bower_components/modernizr/modernizr.min.js') }}.js"></script>
+        <script src="/vendor/modernizr/modernizr.min.{{ filemtime(public_path() . '/vendor/modernizr/modernizr.min.js') }}.js"></script>
     @endif
 
     @if (is_file(public_path() . '/vendor/respond/respond.min.js'))
-        <script src="/vendor/respond/respond.min.{{ filemtime(public_path() . '/vendor/bower_components/respond/respond.min.js') }}.js"></script>
+        <script src="/vendor/respond/respond.min.{{ filemtime(public_path() . '/vendor/respond/respond.min.js') }}.js"></script>
     @endif
 </head>
 <body>
