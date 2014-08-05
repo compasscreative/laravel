@@ -1,0 +1,24 @@
+{
+  "name": "Compass Creative",
+  "version": "1",
+  "homepage": "https://github.com/compasscreative/laravel",
+  "authors": [
+    "Jeremy Hoover <jeremy@compasscreative.ca>"
+  ],
+  "description": "Compass Laravel default install packages",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery-legacy": "jquery#^1",
+    "respond": "~1.4.2",
+    "jquery-validation": "~1.13.0",
+    "imagelightbox": "git@github.com:jeremydouglas/imagelightbox.git"
+  }
+}
