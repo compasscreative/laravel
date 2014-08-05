@@ -1,6 +1,7 @@
 /bootstrap/compiled.php
 /vendor
-/public/vendor/bower_components/
+/public/vendor/bower_components/**
+!/public/vendor/bower_components/respond
 /node_modules
 composer.phar
 composer.lock
