@@ -1,6 +1,6 @@
 # Bower proposal
 
-I’ve included a bower.json manifest file to make updating packages simple. Just run this from the public/vendor dir:
+I’ve included a bower.json manifest file to make updating packages simple. Just run this from the project root dir:
 
 ```
 bower update
@@ -11,3 +11,6 @@ I have a gulp task to build the respond file from bower. This way we don’t hav
 
 ## Modernizr
 I’ve kept modernizr outside of bower so we can have a customized version of it. Eventually we should be able to build our own modernizr file on demand. See: https://github.com/doctyper/customizr
+
+
+(this readme can be merged into the main readme and removed.)
