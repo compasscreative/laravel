@@ -19,6 +19,7 @@
     "jquery-legacy": "jquery#^1",
     "respond": "~1.4.2",
     "jquery-validation": "~1.13.0",
-    "imagelightbox": "git@github.com:jeremydouglas/imagelightbox.git"
+    "imagelightbox": "git@github.com:jeremydouglas/imagelightbox.git",
+    "meyer-reset": "*"
   }
 }
