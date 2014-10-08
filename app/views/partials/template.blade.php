@@ -15,12 +15,8 @@
         <link rel="stylesheet" href="/css/all.{{ filemtime(public_path() . '/css/all.css') }}.css">
     @endif
 
-    @if (is_file(public_path() . '/vendor/modernizr/modernizr.min.js'))
-        <script src="/vendor/modernizr/modernizr.min.{{ filemtime(public_path() . '/vendor/modernizr/modernizr.min.js') }}.js"></script>
-    @endif
-
-    @if (is_file(public_path() . '/vendor/respond/respond.min.js'))
-        <script src="/vendor/respond/respond.min.{{ filemtime(public_path() . '/vendor/respond/respond.min.js') }}.js"></script>
+    @if (is_file(public_path() . '/js/head.min.js'))
+        <script src="/js/head.min.{{ filemtime(public_path() . '/js/head.min.js') }}.js"></script>
     @endif
 </head>
 <body>

@@ -1,6 +1,19 @@
+// vendor
 @import '../vendor/bower_components/meyer-reset/stylesheets/meyer-reset';
+@import '../vendor/bower_components/imagelightbox/sass/imagelightbox';
+
+// mixins
+@import "mixins/clearfix";
+@import "mixins/font_face";
+@import "mixins/image_wrap";
+@import "mixins/justified_grid";
+@import "mixins/matrix_grid";
+@import "mixins/vertical_center";
+
+// base
 @import 'base/fonts';
 @import 'base/layout';
-@import 'base/mixins';
 @import 'base/typography';
 @import 'base/colours';
+
+//blocks

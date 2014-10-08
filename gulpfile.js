@@ -31,7 +31,6 @@ gulp.task('css', function () {
                .pipe(notify({ message: 'Compiled CSS (<%=file.relative%>)' }));
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | Minify JavaScript
@@ -43,6 +42,15 @@ gulp.task('js', function() {
                .pipe(include())
                .pipe(uglify())
                .pipe(rename('all.min.js'))
+               .pipe(gulp.dest('public/js'))
+               .pipe(notify({ message: 'Minified JS (<%=file.relative%>)' }));
+});
+
+gulp.task('headjs', function() {
+    return gulp.src('public/js/head.js')
+               .pipe(include())
+               .pipe(uglify())
+               .pipe(rename('head.min.js'))
                .pipe(gulp.dest('public/js'))
                .pipe(notify({ message: 'Minified JS (<%=file.relative%>)' }));
 });
