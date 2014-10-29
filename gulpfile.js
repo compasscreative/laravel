@@ -11,7 +11,7 @@ var livereload = require('gulp-livereload');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var rename = require('gulp-rename');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 
@@ -23,14 +23,22 @@ var plumber = require('gulp-plumber');
 */
 
 gulp.task('css', function () {
-    return gulp.src('public/sass/all.scss')
-       .pipe(plumber({errorHandler: notify.onError('<%= error.message %>')}))
-       .pipe(sass({ style: 'compressed' }))
-       .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-       .pipe(gulp.dest('public/css'))
-       .pipe(livereload({ auto: false }))
-       .pipe(notify({ message: 'Compiled CSS (<%=file.relative%>)' }));
+    return gulp.src([
+            './public/sass/all.scss'
+            ])
+        .pipe(sass({
+            style: 'compressed',
+            errLogToConsole: false,
+            onError: function(err) {
+                return notify().write(err);
+            }
+        }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+        .pipe(gulp.dest('public/css'))
+        .pipe(livereload({ auto: false }))
+        .pipe(notify({ message: 'Compiled CSS (<%=file.relative%>)' }));
 });
+
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +65,7 @@ gulp.task('headjs', function() {
                .pipe(notify({ message: 'Minified JS (<%=file.relative%>)' }));
 });
 
+
 /*
 |--------------------------------------------------------------------------
 | Build respond.js
@@ -68,6 +77,7 @@ gulp.task('respond', function(){
                .pipe(gulp.dest('public/vendor/respond/'))
                .pipe(notify({ message: 'Built respond.js from bower.' }));
 });
+
 
 /*
 |--------------------------------------------------------------------------
@@ -99,6 +109,13 @@ gulp.task('default', function () {
     // Watch view files
     gulp.watch([
         'app/views/**'
+    ], function (file) {
+        server.changed(file.path);
+    })
+
+    // Watch img files
+    gulp.watch([
+        'public/img/*/**'
     ], function (file) {
         server.changed(file.path);
     })
