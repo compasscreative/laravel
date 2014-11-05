@@ -18,6 +18,12 @@ php artisan migrate
 # Seed the database
 php artisan db:seed
 
+# Download NPM components
+npm update
+
+# Download Bower components
+node_modules/bower/bin/bower update
+
 # Start local development server
 php artisan serve
 ```
